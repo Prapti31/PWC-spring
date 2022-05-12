@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Client.java&apos; to &apos;pwc-spring-aop/src/main/java/com.example.pwcspring&apos;&#x0A;- Original project: &apos;pwc-spring&apos;&#x0A;- Destination element: &apos;pwc-spring-aop/src/main/java/com.example.pwcspring&apos;&#x0A;- Original element: &apos;com.client.Client.java&apos;" description="Copy compilation unit" destination="=pwc-spring-aop/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.pwcspring" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.client{Client.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1649740378717" units="1" version="1.0"/>
+</session>

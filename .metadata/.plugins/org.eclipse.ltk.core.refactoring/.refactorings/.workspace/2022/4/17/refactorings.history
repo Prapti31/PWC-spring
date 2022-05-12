@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;pwc-spring-keynote&apos;" deleteContents="false" description="Delete resource &apos;pwc-spring-keynote&apos;" element1="/pwc-spring-keynote" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1650274479369"/>
+</session>

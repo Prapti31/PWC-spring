@@ -1,0 +1,31 @@
+package com.example.pwcspringMVC;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@RequestMapping("/mainapp")
+public class AppController {
+	@RequestMapping(value= "/welcome",method=RequestMethod.GET)
+	@ResponseBody
+	public String sayHello() {
+		return "welcome to Spring MVC";
+	}
+	@RequestMapping(value= "/login",method=RequestMethod.POST)
+	@ResponseBody
+	public String Login(@RequestBody Login login) {
+		if(login.getUsername().equals("admin") && login.getPassword().equals("manager")) {
+			return "Login Success";
+		}
+		return "Login Failure";
+	}
+	@RequestMapping(value= "/registration",method=RequestMethod.POST)
+	@ResponseBody
+	public String Registration(@RequestBody Registration registration) {
+		return "User registered";
+	}
+	
+}

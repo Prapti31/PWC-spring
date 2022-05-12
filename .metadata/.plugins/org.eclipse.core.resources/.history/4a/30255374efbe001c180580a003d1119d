@@ -1,0 +1,36 @@
+package com.service;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+
+@Service
+public class AppService{
+	@Autowired
+	@LoadBalanced
+	RestTemplate restTemplate;
+	
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
+	public String callApp(String loc) {
+		String response=restTemplate.exchange("http://emp-service/loademp/{loc}",
+				HttpMethod.GET,
+				null,
+				new ParameterizedTypeReference<String>() {
+				}).getBody();
+		return response;
+	}
+//	public String callOrm() {
+//		String response=template.exchange("http://localhost:8060/mainapp/loadusers",
+//				HttpMethod.GET,
+//				null,
+//				new ParameterizedTypeReference<String>() {
+//				}).getBody();
+//		return response;
+//	}
+}
